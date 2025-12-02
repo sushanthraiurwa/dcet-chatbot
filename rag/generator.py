@@ -11,7 +11,7 @@ client = OpenAI(
     base_url="https://api.groq.com/openai/v1"
 )
 
-MODEL = "llama3-70b-8192"  # correct Groq model name
+MODEL = "llama-3.3-70b-versatile"   # BEST free Groq model
 
 
 def generate_answer(context, question):
@@ -23,19 +23,25 @@ def generate_answer(context, question):
     system_prompt = (
         "You are a helpful DCET exam assistant. "
         "Use ONLY the provided context below. "
-        "If the answer is not found in the context, say 'I don't know based on the PDF'."
+        "If the answer is not found in the context, say you don't know."
     )
 
     try:
         response = client.chat.completions.create(
             model=MODEL,
             messages=[
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": f"Context:\n{combined}\n\nQuestion: {question}"}
+                {
+                    "role": "system",
+                    "content": system_prompt
+                },
+                {
+                    "role": "user",
+                    "content": f"CONTEXT:\n{combined}\n\nQUESTION: {question}"
+                }
             ]
         )
 
-        return response.choices[0].message["content"]
+        return response.choices[0].message.content
 
     except Exception as e:
         return f"Error: {str(e)}"
