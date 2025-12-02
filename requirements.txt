@@ -6,15 +6,15 @@ python-dotenv
 pydantic
 requests
 
-# RAG Embeddings + Vector DB (CPU safe)
+# RAG + embeddings
 sentence-transformers==2.2.2
 chromadb==0.5.0
 hnswlib
-onnxruntime-cpu==1.21.1
+onnxruntime==1.21.1
 
-# PDF tools
+# PDF support
 pdfplumber
 reportlab
 
-# Groq client via OpenAI compatibility
+# Groq client
 openai==1.59.5
