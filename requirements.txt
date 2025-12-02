@@ -6,8 +6,10 @@ requests
 
 sentence-transformers==2.2.2
 chromadb==0.5.0
-onnxruntime==1.17.1
 hnswlib
+onnxruntime==1.21.1
 
 pdfplumber
 reportlab
+
+openai==1.59.5
