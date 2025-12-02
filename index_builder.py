@@ -20,3 +20,6 @@ if __name__ == "__main__":
 
 # for m in models.data:
 #     print(m.id)
+
+# client = OpenAI(api_key="", base_url="https://api.groq.com/openai/v1")
+# print(client.embeddings.create(model="nomic-embed-text-v1", input="hello"))
