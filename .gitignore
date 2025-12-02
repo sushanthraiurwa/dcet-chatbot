@@ -8,7 +8,7 @@ new-venv/
 venv/
 
 # Vector DB
-vector_store/
+
 
 # OS files
 .DS_Store

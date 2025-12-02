@@ -1,20 +1,21 @@
---extra-index-url https://download.pytorch.org/whl/cpu
-
-numpy==1.26.4
-huggingface-hub==0.14.1   # FIX for sentence-transformers
-
 fastapi
 uvicorn
 python-dotenv
 pydantic
 requests
 
-sentence-transformers==2.2.2
+# Vector DB (Render SAFE)
 chromadb==0.5.0
 hnswlib
-onnxruntime==1.21.1
+numpy==1.26.4
 
+# ONNX Embeddings (NO torch, NO tokenizers)
+onnx==1.17.0
+onnxruntime==1.17.1
+
+# PDF Processing
 pdfplumber
 reportlab
 
+# Groq LLM (for answering)
 openai==1.59.5
