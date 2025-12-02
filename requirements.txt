@@ -5,8 +5,8 @@ pydantic
 requests
 
 # Vector DB (Render SAFE, Python 3.13 compatible)
-chromadb==0.5.14
-fastembed==0.7.3
+chromadb
+fastembed
 
 # PDF Processing
 pdfplumber
